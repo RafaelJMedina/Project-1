@@ -18,16 +18,24 @@ export const CreadorDeTareas = ({CrearTarea}) => {  // cuando uso props puedo de
     
           <h1> Hola { nombre } tus tareas pendientes! </h1>
             
-          <form onSubmit={DatosSubmit}> 
-              <input 
-                type="text" 
-                placeholder="Escribe la Tarea"
-                value={newTarea} // reflejando el estado puedo hacer que el input se vacie 
-                onChange={(e) => setNewTarea(e.target.value)} // Guarda el valor de la tarea en newTarea dentro del setNewTarea
-              />
-              <button>
-                Guardar
-              </button>
+          <form onSubmit={DatosSubmit} className="my-4 row"> 
+              
+              <div className="col-9">
+                <input 
+                  type="text" 
+                  placeholder="Escribe la Tarea"
+                  value={newTarea} // reflejando el estado puedo hacer que el input se vacie 
+                  onChange={(e) => setNewTarea(e.target.value)} // Guarda el valor de la tarea en newTarea dentro del setNewTarea
+                  className='form-control'
+                />
+              </div>
+
+              <div className="col-3">
+                <button className="btn-sm">
+                  Guardar
+                </button>
+              </div>
+              
           </form>
           
           
